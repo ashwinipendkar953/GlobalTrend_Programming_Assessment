@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      class HashMap {
+        constructor() {
+          this.map = {};
+        }
+
+        // Put a key-value pair into the hashmap
+        put(key, value) {
+          this.map[key] = value;
+        }
+
+        // Get the value associated with the key
+        get(key) {
+          return this.map.hasOwnProperty(key) ? this.map[key] : undefined;
+        }
+
+        // Remove the key-value pair from the hashmap
+        remove(key) {
+          if (this.map.hasOwnProperty(key)) {
+            delete this.map[key];
+          }
+        }
+      }
+
+      const hashMap = new HashMap();
+      hashMap.put("name", "Alice");
+      hashMap.put("age", 25);
+
+      console.log(hashMap.get("name")); // Output: Alice
+      console.log(hashMap.get("age")); // Output: 25
+
+      hashMap.remove("name");
+      console.log(hashMap.get("name")); // Output: undefined
+      console.log(hashMap.get("age")); // Output: 25
+    </script>
+  </body>
+</html>

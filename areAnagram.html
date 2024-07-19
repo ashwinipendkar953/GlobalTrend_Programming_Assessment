@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Are Anagram strings</title>
+  </head>
+  <body>
+    <script>
+      function checkAnagrams(str1, str2) {
+        var newstr1 = str1.toLowerCase().split("").sort().join();
+        var newstr2 = str2.toLowerCase().split("").sort().join();
+
+        if (newstr1 == newstr2) {
+          document.write("String is Anagrams", "<br/>");
+        } else {
+          document.write("String is Not Anagrams", "<br/>");
+        }
+      }
+
+      checkAnagrams("Hello", "lolHe");
+      checkAnagrams("Indian", "nIndisn");
+      checkAnagrams("aza", "zaa");
+    </script>
+  </body>
+</html>

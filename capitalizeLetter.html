@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Capitalize letter</title>
+  </head>
+  <body>
+    <script>
+      function capitalizeLetter(str) {
+        const words = str.split(" ");
+        let modifiedSentence = "";
+        for (let i = 0; i < words.length; i++) {
+          modifiedSentence +=
+            words[i][0].toUpperCase() + words[i].substr(1) + " ";
+        }
+        return modifiedSentence;
+      }
+
+      document.write(capitalizeLetter("I am learning redux."));
+    </script>
+  </body>
+</html>

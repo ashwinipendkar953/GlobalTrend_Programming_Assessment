@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FizzBuzz</title>
+  </head>
+  <body>
+    <script>
+      function evaluateExpression(expression) {
+        return new Function("return " + expression)();
+      }
+
+      const expression1 = "3 + 5 - 2";
+      const expression2 = "10 - 4 + 2.5 - 1.5";
+      document.write(evaluateExpression(expression1) + "<br/>"); // Output: 6
+      document.write(evaluateExpression(expression2)); // Output: 7
+    </script>
+  </body>
+</html>
